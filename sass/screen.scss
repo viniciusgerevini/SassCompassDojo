@@ -1,0 +1,152 @@
+
+@import "compass/reset";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+
+@import "_mixins"; // Partial
+
+@import "icons/*.png";
+
+
+// Google Web Font
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,500);
+
+
+$backgroud_color : #eee;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto";
+	text-align: center;
+	background-color: $backgroud_color;
+	color: #333;
+}
+
+.social {
+	float: left;
+
+	.social-icons {
+		width: 34px;
+		height: 34px;
+		display: inline-block;
+
+		@include transition(all, 0.2s, linear);
+
+		&:hover {
+			@include transform(rotate(-20deg));
+		}
+	}
+
+	.fb {
+		@extend .social-icons;
+		@include icons-sprite(ic_facebook);
+
+		// Exemplo de como buscar tamanho de imagem específica dentro do sprite
+		// width: icons-sprite-width(ic_facebook);
+		// height: icons-sprite-height(ic_facebook);
+	}
+
+	.inst {
+		@extend .social-icons;
+		@include icons-sprite(ic_instagram);
+	}
+
+	.yt {
+		@extend .social-icons;
+		@include icons-sprite(ic_youtube);
+	}
+
+	.tw {
+		@extend .social-icons;
+		@include icons-sprite(ic_twitter);
+	}
+
+	.in {
+		@extend .social-icons;
+		@include icons-sprite(ic_linkedin);
+	}
+}
+
+
+.header-bar
+{
+	position: fixed;
+	padding: 10px;
+	width: 100%;
+	background-color: rgba(51, 51, 51, 0.7);
+	color: #fff;
+
+
+	.top-menu {
+		float: right;
+		margin-top: 10px;
+		li {
+			display: inline-block;
+			a {
+				color: #fff;
+				text-decoration: none;
+
+				&:hover {
+					color: #aaa;
+				}
+
+				&:after {
+					content: "|";
+					padding: 0px 10px;
+				}
+
+				&:last-child:after {
+					content: "";
+				}
+			}
+		}
+	}
+}
+
+.header {
+	padding: 10px 10px 20px;
+	text-align: center;
+	background: url('../images/bg.jpg') no-repeat fixed center center / cover #fff;
+	width: 100%;
+
+	.lhama
+	{
+		margin-top: 70px;
+		display: inline-block;
+		width: 300px;
+		height: 300px;
+		background: url('../images/lhama.jpg') no-repeat center center / cover;
+		border: 3px dashed #eee;
+		@include border-radius(200px);
+	}
+
+	h1 {
+		color: #fff;
+		font-size: 32px;
+		@include text-shadow(0px, 1px, 2px, #000);
+	}
+
+}
+
+.footer {
+	text-align: center;
+	padding: 10px;
+	font-size: 12px;
+}
+
+
+.card
+{
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #fff;
+	max-width: 600px;
+	min-height: 300px;
+
+	@include box-shadow(#555 2px 2px 10px);
+}

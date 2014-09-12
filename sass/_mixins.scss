@@ -1,0 +1,8 @@
+// Custom mixin example
+@mixin text-shadow ($h-shadow, $v-shadow, $blur, $color) {
+	-webkit-text-shadow: $h-shadow $v-shadow $blur $color;
+	-moz-text-shadow: $h-shadow $v-shadow $blur $color;
+	-o-text-shadow: $h-shadow $v-shadow $blur $color;
+	-ms-text-shadow: $h-shadow $v-shadow $blur $color;
+	text-shadow: $h-shadow $v-shadow $blur $color;
+}
