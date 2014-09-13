@@ -1,12 +1,12 @@
-LhamaCorp Dojo
+Sass / Compass Dojo
 ===============
 
-Projeto para postarmos os resultados e exemplos obtidos durante os DOJOS do grupo.
+Código de exemplo sobre Sass / Compass.
+Criado e apresentado no Dojo do grupo.
 
 
-http://viniciusgerevini.github.io/LhamaCorpDojo
 
+* Preview - http://viniciusgerevini.github.io/SassCompassDojo
 
-##DOJOs Realizados
+* Apresentação -  (Slides ainda não disponibilizados :P)
 
-* Sass / Compass (Slides ainda não disponibilizados :P)
